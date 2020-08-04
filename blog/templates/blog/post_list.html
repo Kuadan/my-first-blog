@@ -1,10 +1,10 @@
-
-<html>
-  <head>
-    <title>Kuadans Blog</title>
-  </head>
-  <body>
-    <p>Halli-Hallo</p>
-    <p>Es hat funktioniert</p>
-  </body>
-</html>
+<div>
+  <h1> <a href="/">Kuadans Blog </a> </h1>
+</div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
